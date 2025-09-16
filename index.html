@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리의 결혼식에 초대합니다</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        body {
+            font-family: 'Gowun Dodum', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f8f3;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        header {
+            padding: 40px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        
+        header h2 {
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            color: #555;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: auto;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .invitation-text {
+            padding: 30px 20px;
+            line-height: 2;
+            font-size: 1.1em;
+        }
+        
+        .names {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .parents {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .section {
+            padding: 40px 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #dAA520; /* 포인트 컬러 */
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .info-item .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+            color: #dAA520;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .contact-button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #dAA520;
+            color: #fff;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        
+        .contact-info {
+            line-height: 2.2;
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h2>SAVE THE DATE</h2>
+            <h1>김철수 & 이영희</h1>
+            <p>2025년 11월 15일 토요일 오후 2시</p>
+        </header>
+
+        <img src="https://via.placeholder.com/600x800" alt="웨딩 메인 사진" class="main-photo">
+        <section class="invitation-text">
+            <h3>초대합니다</h3>
+            <p>
+                서로 마주보며 다져온 사랑을<br>
+                이제 함께 한 곳을 바라보며 걸어갈 수 있는<br>
+                큰 사랑으로 키우고자 합니다.<br>
+                저희 두 사람이 사랑의 이름으로<br>
+                지켜나갈 수 있도록<br>
+                앞날을 축복해 주시면 감사하겠습니다.
+            </p>
+            <div class="names">
+                김철수 <span style="font-size:0.7em; color:#aaa;">그리고</span> 이영희
+            </div>
+            <div class="parents">
+                김아빠 · 박엄마 의 아들 철수<br>
+                이아빠 · 최엄마 의 딸 영희
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>안내</h2>
+            <div class="info-item">
+                <span class="icon">🗓️</span>
+                <span>2025년 11월 15일 토요일 오후 2시</span>
+            </div>
+            <div class="info-item">
+                <span class="icon">📍</span>
+                <span>대전컨벤션센터 2층 그랜드볼룸</span>
+            </div>
+            <div id="map" class="map-container"></div>
+        </section>
+
+        <section class="section">
+            <h2>갤러리</h2>
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/300" alt="웨딩 사진 1">
+                <img src="https://via.placeholder.com/300" alt="웨딩 사진 2">
+                <img src="https://via.placeholder.com/300" alt="웨딩 사진 3">
+                <img src="https://via.placeholder.com/300" alt="웨딩 사진 4">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>연락처</h2>
+            <div class="contact-info">
+                <p>
+                    <strong>신랑 김철수</strong><br>
+                    <a href="tel:010-1234-5678" class="contact-button">📞 전화걸기</a>
+                    <a href="sms:010-1234-5678" class="contact-button">✉️ 문자보내기</a>
+                </p>
+                <p>
+                    <strong>신부 이영희</strong><br>
+                    <a href="tel:010-9876-5432" class="contact-button">📞 전화걸기</a>
+                    <a href="sms:010-9876-5432" class="contact-button">✉️ 문자보내기</a>
+                </p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>마음 전하실 곳 (계좌번호)</p>
+            <p>신랑측: OO은행 123-456-7890 (예금주: 김철수)</p>
+            <p>신부측: XX은행 098-765-4321 (예금주: 이영희)</p>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng(36.37216, 127.3892), // 💡 예시: 대전컨벤션센터의 위도, 경도
+                level: 3 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: new kakao.maps.LatLng(36.37216, 127.3892)
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+    </script>
+</body>
+</html>
